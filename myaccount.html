@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My account</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Fonts APIS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root{
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: white;
+        }
+
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 320px;
+        }
+
+        .logo{
+            width: 160px;
+            display: none;
+            margin-bottom: 48px;
+            justify-self: center;
+        }
+
+        .title{
+            font-size: 24px;
+            margin-bottom: 12px;
+            text-align: start;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+            margin-bottom: 32px;
+        }
+
+        
+
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label{
+            font-size: var(--sm);
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+        }
+
+        .value{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin: 8px 0 32px 0;
+        }
+
+        .secondary-button{
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid darkgreen;
+            color: black;
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 1px;
+            font-weight: bold;
+        }
+
+        .login-button:hover{
+            background-color: darkgreen;
+        }
+
+        .login-button{
+            margin-top: 20px;
+            
+        }
+
+        @media(max-width: 640px){
+            
+
+            .form{
+                height: 100%;
+                justify-content: space-between;
+            }
+
+            .form-container {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            
+            <h1 class="title">My account</h1>
+            
+
+            <form action="#" class="form">
+
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <p class="value">Your Name</p>
+
+                    <label for="mail" class="label">Email address</label>
+                    <p class="value">Your Email Address</p>
+
+                    <label for="password" class="label">Password</label>
+                    <p class="value">Your Password</p>
+                </div>
+                
+                <input type="submit" value="Edit your account" class="secondary-button login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Mobile</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Fonts APIS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: white;
+        }
+
+        .mobile-menu{
+            padding: 24px;
+
+        }
+        .mobile-menu ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 24px 0 0; 
+        }
+
+        .mobile-menu ul:first-child{
+            border-bottom: 1px solid darkgreen; 
+        }
+
+        .mobile-menu ul li{
+            margin-bottom: 24px;
+        }
+
+        .mobile-menu a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            /* margin-bottom: 24px; */
+        }
+
+        .mobile-menu .mail{
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .mobile-menu .sign-out{
+            color: lightgreen;
+            font-size: 12px;
+        }
+        
+        .mobile-menu ul:last-child{
+            position: absolute;
+            bottom: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="mobile-menu">
+        <!-- Lista categorias -->
+        <ul>
+            <li>
+                <a href="#">CATEGORIES</a>
+            </li>
+
+            <li>
+                <a href="#">All</a>
+            </li>
+
+            <li>
+                <a href="#">Clothes</a>
+            </li>
+
+            <li>
+                <a href="#">Electronics</a>
+            </li>
+
+            <li>
+                <a href="#">Furnitures</a>
+            </li>
+
+            <li>
+                <a href="#">Toys</a>
+            </li>
+
+            <li>
+                <a href="#">Others</a>
+            </li>
+        </ul>
+
+        <!-- Opciones de cuenta -->
+        <ul>
+            <li>
+                <a href="#">My orders</a>
+            </li>
+
+            <li>
+                <a href="#">My account</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="#" class="mail">emailexample@gmail.com</a>
+            </li>
+
+            <li>
+                <a href="#" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

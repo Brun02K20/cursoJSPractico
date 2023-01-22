@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail sent</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Fonts APIS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: white;
+        }
+
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 320px;
+            justify-items: center;
+        }
+
+        .logo{
+            width: 160px;
+            display: none;
+            margin-bottom: 48px;
+            justify-self: center;
+        }
+
+        .title{
+            font-size: 24px;
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+        }
+
+        
+        .subtitle{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color: darkgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+
+        .email-image img{
+            width: 80px;
+        }
+
+        .resend{
+            font-size: var(--sm);
+        }
+
+        .resend span{
+            color: black;
+        }
+
+        .resend a{
+            color: darkgreen;
+            text-decoration: none;
+        }
+        .primary-button{
+            background-color: lightgreen;
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 1px;
+            font-weight: bold;
+            
+        }
+
+        .login-button:hover{
+            background-color: darkgreen;
+        }
+
+        .login-button{
+            margin-bottom: 8px;
+        }
+
+        @media(max-width: 640px){
+            .logo{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+            <div class="email-image">
+                <img src="icons/email.svg" alt="mail icon" class="">
+            </div>
+
+            <button class="primary-button login-button">LOGIN</button>
+
+            <p class="resend">
+                <span>Didn't recieve the email?</span>
+                <a href="/">Resend</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
