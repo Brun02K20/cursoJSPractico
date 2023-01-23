@@ -99,19 +99,10 @@ nav{
     align-items: center;
 }
 
-@media (max-width: 800px){
-    .menu{
-        display: block;
-    }
 
-    .navbar-left ul{
-        display: none;
-    }
 
-    .navbar-email{
-        display: none;
-    }
-}
+
+
 
 /* DESKTOP MENU  */
 
@@ -157,4 +148,84 @@ nav{
     font-size: var(--md);
     margin-bottom: 20px;
     display: inline-block;
+}
+
+
+
+
+/* MENU MOBILE */
+
+img[src="icons/icon_menu.svg"]{
+    cursor: pointer;
+}
+
+.mobile-menu{
+    padding: 24px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.mobile-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 24px 0 0; 
+}
+
+.mobile-menu ul:first-child{
+    border-bottom: 1px solid darkgreen; 
+}
+
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+
+.mobile-menu a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+}
+
+.mobile-menu .mail{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.mobile-menu .sign-out{
+    color: lightgreen;
+    font-size: 12px;
+}
+
+.mobile-menu ul:last-child{
+    position: absolute;
+    bottom: 0;
+}   
+
+
+
+@media (max-width: 800px){
+    .menu{
+        display: block;
+    }
+
+    .navbar-left ul{
+        display: none;
+    }
+
+    .navbar-email{
+        display: none;
+    }
+
+    /* PARA QUE EL MENU DE COMPU NO APAREZCA EN CELU */
+    .desktop-menu{
+        display: none;
+    }
+}
+
+@media (min-width: 801px){
+
+    /* PARA QUE EL MENU DE CELU NO APAREZCA EN COMPU */
+    .mobile-menu{
+        display: none;
+    }
 }
