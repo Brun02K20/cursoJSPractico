@@ -1,0 +1,160 @@
+/* VARIABLES GENERALES */
+
+:root{
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+}
+
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+}
+
+/* PARA OCULTAR EL MENU, LA IDEA ES ACTIVAR Y DESACTIVAR ESTA CLASE CON JAVASCRIPT CADA VEZ QUE HAGA CLICK EN EL EMAIL  */
+.inactive {
+    display: none;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.menu{
+    display: none;
+}
+
+.logo{
+    width: 100px;
+}
+
+.navbar-left{
+    display: flex;
+    
+}
+
+.navbar-left ul{
+    margin-left: 12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 8px;
+
+}
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+    border: 1px solid darkgreen;
+    color: green;
+}
+
+
+.navbar-left ul,
+.navbar-right ul{
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-email{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.navbar-shopping-cart{
+    position: relative;
+}
+
+.navbar-shopping-cart div{
+    width: 12px;
+    height: 12px;
+    background-color: lightgreen;
+    border: 1px solid darkgreen;
+    border-radius: 50%;
+    font-size: small;
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px){
+    .menu{
+        display: block;
+    }
+
+    .navbar-left ul{
+        display: none;
+    }
+
+    .navbar-email{
+        display: none;
+    }
+}
+
+/* DESKTOP MENU  */
+
+.desktop-menu{
+    position: absolute;
+
+    /* COMO TENEMOS POSITION: ABSOLUTE PODEMOS USAR TOP, RIGHT, MARGIN, BOTTOM */
+    background-color: var(--white);
+    top: 60px;
+    right: 60px;
+    width: 100px;
+    height: auto;
+    border: 1px ridge darkgreen;
+    border-radius: 4px;
+    padding: 20px 20px 0 20px;
+}
+
+.desktop-menu ul{
+    list-style-type: none;
+    /* los ul tienen por defecto padding y margin, aca se lo estamos sacando */
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li{
+    text-align: end;
+    
+}
+
+.desktop-menu ul li:nth-child(1){font-weight: bold;}
+.desktop-menu ul li:nth-child(2){font-weight: bold;}
+.desktop-menu ul li:last-child{
+    padding-top: 20px;
+    border-top: 1px solid darkgreen;
+    
+}
+.desktop-menu ul li:last-child a{
+    color: lightgreen;
+}
+.desktop-menu ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: var(--md);
+    margin-bottom: 20px;
+    display: inline-block;
+}
