@@ -161,6 +161,7 @@ img[src="icons/icon_menu.svg"]{
 
 .mobile-menu{
     padding: 24px;
+    background-color: var(--white);
     position: absolute;
     top: 60px;
     left: 0;
@@ -203,7 +204,102 @@ img[src="icons/icon_menu.svg"]{
 
 
 
-@media (max-width: 800px){
+
+/* ASIDE (PRODUCT DETAIL); EL SHOPPING CART*/
+
+.product-detail{
+    background-color: var(--white);
+    width: 360px;
+    padding: 0 24px;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.title-container{
+    display: flex;
+}
+
+.title-container img{
+    transform: rotate(180deg);
+    margin-right: 12px;
+}
+
+.primary-button{
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: var(--md);
+    font-weight: bold;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.shopping-cart{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto ;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shopping-cart figure{
+    margin: 0;
+
+}
+
+.shopping-cart figure img{
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    object-fit: cover;
+
+}
+
+.shopping-cart p:nth-child(2){
+    color: var(--very-light-pink);
+}
+
+.shopping-cart p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+
+.order p:nth-child(2){
+    text-align: end;
+    font-weight: 500;
+}
+
+.order p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+
+@media (max-width: 640px){
     .menu{
         display: block;
     }
@@ -220,9 +316,14 @@ img[src="icons/icon_menu.svg"]{
     .desktop-menu{
         display: none;
     }
+
+    /* DEL ASIDE: */
+    .product-detail{
+        width: 100%;
+    }
 }
 
-@media (min-width: 801px){
+@media (min-width: 641px){
 
     /* PARA QUE EL MENU DE CELU NO APAREZCA EN COMPU */
     .mobile-menu{
