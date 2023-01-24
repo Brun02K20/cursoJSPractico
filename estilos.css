@@ -315,6 +315,7 @@ img[src="icons/icon_menu.svg"]{
     place-content: center;
 
     margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .product-card{
