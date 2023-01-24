@@ -17,7 +17,7 @@ let shopCart = document.querySelector(".product-detail");
 let productCardsContainer = document.querySelector(".cards-container");
 let mainContainer = document.querySelector(".main-container")
 
-// AÑADO UN ESCUCHADOR PARA INDICARLE QUE CUANDO SE HAGA CLICK SOBRE EL EMAIL DE LA NAVBAR SE EJECUTE LA FUNCION TOGGLEDESKTOPMENU; MISMA LOGICA PARA EL MENU MOBILE
+// AÑADO UN ESCUCHADOR PARA INDICARLE QUE CUANDO SE HAGA CLICK SOBRE EL EMAIL DE LA NAVBAR SE EJECUTE LA FUNCION TOGGLEDESKTOPMENU; MISMA LOGICA PARA EL MENU MOBILE, EL CARRITO, ETC
 emailMenu.addEventListener("click", toggleDesktopMenu);
 burgerIcon.addEventListener("click", toggleMobileMenu);
 menuCarIcon.addEventListener("click",toggleShoppingCart);
@@ -38,7 +38,7 @@ function toggleDesktopMenu(){
 }
 
 
-// FUNCION TOGGLEMMOBILEMENU, MISMA LOGICA QUE LA FUNCION TOGGLEDESKTOPMENU
+// FUNCION TOGGLEMMOBILEMENU; TOGGLESHOPPINGCART, MISMA LOGICA QUE LA FUNCION TOGGLEDESKTOPMENU
 function toggleMobileMenu(){
 
     isShopCartClosed = shopCart.classList.contains("inactive");
@@ -118,6 +118,61 @@ productList.push({
     price: 200,
     image: "https://images.pexels.com/photos/130855/pexels-photo-130855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 })
+
+productList.push({
+    name: "Apple Smartphone",
+    price: 840,
+    image: "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Clock",
+    price: 40,
+    image: "https://images.pexels.com/photos/1010480/pexels-photo-1010480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Purse",
+    price: 200,
+    image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Purse",
+    price: 200,
+    image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "School Bag",
+    price: 120,
+    image: "https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Books",
+    price: 250,
+    image: "https://images.pexels.com/photos/768125/pexels-photo-768125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Book TAKE THE RISK",
+    price: 130,
+    image: "https://images.pexels.com/photos/2386687/pexels-photo-2386687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Tea set",
+    price: 400,
+    image: "https://images.pexels.com/photos/1470008/pexels-photo-1470008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
+productList.push({
+    name: "Clothing",
+    price: 400,
+    image: "https://images.pexels.com/photos/581087/pexels-photo-581087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+})
+
 
 // AHORA LO QUE TOCA ES INTRODUCIR ESE ARRAY DE OBJETOS EN NUESTRO HTML; PARA ESO DEBO RECORRER ESE ARRAY MEDIANTE UN FOR
 
