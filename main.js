@@ -15,23 +15,37 @@ let shopCart = document.querySelector(".product-detail");
 
 // SELECCIONO EL CARDS-CONTAINER Y EL MAIN-CONTAINER DE LA LISTA DE PRODUCTOS DE LA PAGINA PRINCIPAL, LA LISTA DE PRODUCTOS QUE ESTA DISEÑADA CON CSS GRID
 let productCardsContainer = document.querySelector(".cards-container");
-let mainContainer = document.querySelector(".main-container")
+let mainContainer = document.querySelector(".main-container");
+
+// SELECTORES RELACIONADOS AL PRODUCT DETAIL
+let productDetailContainer = document.querySelector(".product-detail-secondary");
+let productDetailCloseIcon = document.querySelector(".product-detail-secondary-close");
+
+// aca
+let imagen = document.querySelector("#img_product");
+let precio = document.querySelector("#product_price");
+let nombre = document.querySelector("#product_name");
+let descripcion = document.querySelector("#product_description");
 
 // AÑADO UN ESCUCHADOR PARA INDICARLE QUE CUANDO SE HAGA CLICK SOBRE EL EMAIL DE LA NAVBAR SE EJECUTE LA FUNCION TOGGLEDESKTOPMENU; MISMA LOGICA PARA EL MENU MOBILE, EL CARRITO, ETC
 emailMenu.addEventListener("click", toggleDesktopMenu);
 burgerIcon.addEventListener("click", toggleMobileMenu);
 menuCarIcon.addEventListener("click",toggleShoppingCart);
+productDetailCloseIcon.addEventListener("click",closeProductDetailAside);
 
 // LA FUNCION TOGGLEDESKTOPMENU
 function toggleDesktopMenu(){
 
-    
+    isProductDetailAsideClosed = productDetailContainer.classList.contains("inactive");
     isShopCartClosed = shopCart.classList.contains("inactive");
     
     if (!isShopCartClosed){
         shopCart.classList.add("inactive");
     }
 
+    if(!isProductDetailAsideClosed){
+        productDetailContainer.classList.add("inactive");
+    }
 
     // QUITAR O PONER LA CLASE PASADA POR PARAMETRO
     desktopMenu.classList.toggle("inactive");
@@ -40,23 +54,26 @@ function toggleDesktopMenu(){
 
 // FUNCION TOGGLEMMOBILEMENU; TOGGLESHOPPINGCART, MISMA LOGICA QUE LA FUNCION TOGGLEDESKTOPMENU
 function toggleMobileMenu(){
-
+    isProductDetailAsideClosed = productDetailContainer.classList.contains("inactive");
     isShopCartClosed = shopCart.classList.contains("inactive");
     
     if (!isShopCartClosed){
         shopCart.classList.add("inactive");
     }
 
+    if(!isProductDetailAsideClosed){
+        productDetailContainer.classList.add("inactive");
+    }
 
     mobileMenu.classList.toggle("inactive");
 }
 
 function toggleShoppingCart(){
 
-    // Preguntar si mobilemenu y desktopmenu estan abiertos o no
+    // Preguntar si mobilemenu; desktopmenu; productDetailAside estan abiertos o no
     isMobileMenuClosed = mobileMenu.classList.contains("inactive");
     isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
-
+    isProductDetailAsideClosed = productDetailContainer.classList.contains("inactive");
 
     // Si estan abierto, añadirles la clase active a su respectivo elemento para que se cierren
     if (!isMobileMenuClosed){
@@ -67,10 +84,29 @@ function toggleShoppingCart(){
         desktopMenu.classList.add("inactive");
     }
 
+    if(!isProductDetailAsideClosed){
+        productDetailContainer.classList.add("inactive");
+    }
+
     // Para intercambiar apertura y cierre del menu cada vez que se de click
     shopCart.classList.toggle("inactive");
 
     // LA LOGICA DE ESTA FUNCION APLICA A LAS FUNCIONES TOGGLEMOBILEMENU Y TOGGLEDESKTOPMENU
+}
+
+
+// Para abrir el detalle de producto
+function openProductDetailAside(event){
+    shopCart.classList.add("inactive");
+    desktopMenu.classList.add("inactive");
+    mobileMenu.classList.add("inactive");
+    productDetailContainer.classList.remove("inactive");   // aca
+    imagen.setAttribute("src", event.target.src);
+    precio.innerText = event.target.nextElementSibling.innerText;
+}
+
+function closeProductDetailAside(){
+    productDetailContainer.classList.add("inactive");
 }
 
 // VAMOS A HACER REUTILIZACION DE CODIGO PARA GENERAR LOS PRODUCTOS EN LA PAGINA PRINCIPAL; VAMOS A MAQUETAR LOS PRODUCTOS DESDE JS PARA NO TENER CADA PUTO PRODUCTO EN LOS HTML, ES INSANO Y LOCO XDDDDD
@@ -129,12 +165,6 @@ productList.push({
     name: "Clock",
     price: 40,
     image: "https://images.pexels.com/photos/1010480/pexels-photo-1010480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-})
-
-productList.push({
-    name: "Purse",
-    price: 200,
-    image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 })
 
 productList.push({
@@ -206,6 +236,7 @@ function renderPorducts(arr){
         let product_Image = document.createElement("img");
         product_Image.classList.add("product-img");
         product_Image.setAttribute("src", product.image);
+        product_Image.addEventListener("click", openProductDetailAside)
     
         let productInformation = document.createElement("div");
         productInformation.classList.add("product-info");

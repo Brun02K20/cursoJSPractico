@@ -165,6 +165,7 @@ img[src="icons/icon_menu.svg"]{
     position: absolute;
     top: 60px;
     left: 0;
+    width: 100%;
 }
 .mobile-menu ul{
     list-style-type: none;
