@@ -260,7 +260,7 @@ function renderPorducts(arr){
         productInformation.append(productDiv,productFigure);
         productCard.append(product_Image,productInformation);
     
-        // YA CREAMOS LA TARJETITA DEL PRODUCTO, LO QUE NOS FALTA ES AÑADIR ESA TARJETITA AL CARDS-CONTAINER Y ESE CARDS-CONTAINER AL MAIN-CONTAINER
+        // YA CREAMOS LA TARJETITA DEL PRODUCTO, LO QUE NOS FALTA ES AÑADIR ESA TARJETITA AL CARDS-CONTAINER
     
         productCardsContainer.append(productCard);
     };
